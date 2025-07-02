@@ -6,23 +6,20 @@ public class ContaTerminal {
         
         // Solicitar e capturar dados do usuário
         System.out.println("Por favor, digite o número da Agência: ");
-        String agencia = scanner.nextLine();
+        var agencia = scanner.nextLine();
         
         System.out.println("Por favor, digite o número da Conta: ");
-        int numero = scanner.nextInt();
+        var numero = scanner.nextInt();
         scanner.nextLine(); // Limpar o buffer
 
         System.out.println("Por favor, digite seu nome: ");
-        String nomeCliente = scanner.nextLine();
+        var nomeCliente = scanner.nextLine();
         
         System.out.println("Por favor, digite o saldo: ");
-        double saldo = scanner.nextDouble();
+        var saldo = scanner.nextDouble();
         
         // Exibir mensagem de confirmação
-        System.out.println("Olá " + nomeCliente +
-            ", obrigado por criar uma conta em nosso banco, sua agência é " + 
-            agencia + ", conta " + numero + 
-            " e seu saldo " + saldo + " já está disponível para saque.");
+        System.out.printf("Olá %s, obrigado por criar uma conta em nosso banco, sua agência é %s, conta %d e seu saldo %.2f já está disponível para saque.\n", nomeCliente, agencia, numero, saldo );
         
         scanner.close();
     }
